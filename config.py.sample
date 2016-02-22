@@ -1,0 +1,4 @@
+habitica_user_id = 'HABITICA USER ID'
+habitica_api_token = 'HABITICA API TOKEN'
+
+todoist_api_token = 'TODOIST API TOKEN'
