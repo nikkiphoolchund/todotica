@@ -7,12 +7,13 @@ from datetime import datetime
 from dateutil.parser import parse
 import pprint
 
+import config
 #
 # - Recuperer les taches dans chaque projet qui sont uncompleted
 # - Filtrer les taches et recuperer seulement le nom des taches
 
 def get_uncompleted():
-    api = todoist.TodoistAPI('b5d1c0868fda34530315cb2c50c2c8ac6db5cacd')
+    api = todoist.TodoistAPI(config.todoist_api_token)
     myTasks = api.query(['view all'])[0]
 
     data = myTasks['data']
