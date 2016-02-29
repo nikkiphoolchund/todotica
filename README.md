@@ -6,6 +6,7 @@
 
 * todotica-python: `$ pip install todoist-python`
 * python-dateutil
+* Mako
 
 ### Getting the code running
 
