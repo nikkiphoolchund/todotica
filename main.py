@@ -1,3 +1,5 @@
+# coding: utf8
+
 import json
 import inspect
 import sys
@@ -58,18 +60,27 @@ def main():
 
     # TODO: Remove when tests finished
     tasks = []
-    task_one = Task("Task One", "31/12/1987")
-    task_two = Task("Task Two", "19/09/1990")
+    # task_one = Task("Task One", "31/12/1987")
+    # task_two = Task("Task Two", "19/09/1990")
+    #
+    # tasks.append(task_one)
+    # tasks.append(task_two)
 
-    tasks.append(task_one)
-    tasks.append(task_two)
+    # Get all the habitica tasks into Task objects
+    habitica_tasks = api_habitica.get_uncompleted()
+    for h_task in habitica_tasks:
+        tasks.append(h_task)
+
+    # Get all the todoist tasks into Task objects
+    todoist_tasks = api_todoist.get_uncompleted()
+    for t_task in todoist_tasks:
+        tasks.append(t_task)
 
     myTemplate = Template(filename=tasks_file_template_name)
     tasks_file_template_rendered = myTemplate.render(tasks=tasks)
 
     with open(store_tasks_file_name, "w+") as file_tasks:
-        file_tasks.write(tasks_file_template_rendered)
-
+        file_tasks.write(tasks_file_template_rendered.encode('utf-8'))
 
 
 if __name__ == "__main__":
