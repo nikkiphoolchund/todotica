@@ -11,6 +11,7 @@ import config
 #
 # - Recuperer les taches dans chaque projet qui sont uncompleted
 # - Filtrer les taches et recuperer seulement le nom des taches
+#  TODO: Catch the error is error_tag: AUTH_INVALID_TOKEN
 
 def get_uncompleted():
     api = todoist.TodoistAPI(config.todoist_api_token)
