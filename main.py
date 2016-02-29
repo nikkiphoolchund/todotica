@@ -49,11 +49,6 @@ def main():
     # Get the args passed in parameter
     args = parser.parse_args()
 
-    if args.debug:
-        # We clean the content of file_tasks for debug purpose
-        log.debug(''.join(["We erase the content of ", store_tasks_file_name, " before writing again"]))
-        open(store_tasks_file_name, 'w').close()
-
     # TODO:
     # 1. If not file tasks_synchronized, then first time launch (print it) => Retrieve all tasks uncompleted from todoist
     #   and from habitRica, and synchronize bidirecitonnaly (only add). Plus, add all tasks synchronized into the file_tasks
@@ -72,7 +67,7 @@ def main():
     myTemplate = Template(filename=tasks_file_template_name)
     tasks_file_template_rendered = myTemplate.render(tasks=tasks)
 
-    with open(store_tasks_file_name, "a+") as file_tasks:
+    with open(store_tasks_file_name, "w+") as file_tasks:
         file_tasks.write(tasks_file_template_rendered)
 
 
