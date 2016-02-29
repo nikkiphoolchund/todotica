@@ -6,7 +6,7 @@
                     Task
                 </th>
                 <th>
-                    Date due
+                    Due date
                 </th>
             </tr>
             % for task in tasks:
