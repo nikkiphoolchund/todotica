@@ -3,6 +3,8 @@
 class Task:
     ### Agnostic Todotica class
 
+    # TODO: Create two sub-classes: One for Habitica and one for Todoist => So can retrieve where does the task comes from
+
     def __init__(self, name, due_date):
         self.name = name    # instance variable unique to each instance
         self.due_date = due_date
