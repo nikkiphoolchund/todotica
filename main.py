@@ -22,6 +22,7 @@ from Task import Task
 # - TODO: If a task has disappeared, it could either mean it has been completed OR it has been deleted. Manage the cases.
 # - TODO: Create a class Task which have an agnostic format (not specific to todoist or habitica)
 # - TODO: Create classes to transfer a Habitica or Todoist task into a todotica task class
+# - TODO: Create an file which stores all the objects instead of a raw file => See Pickle
 
 # print api_todoist.get_uncompleted()
 
