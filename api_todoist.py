@@ -24,7 +24,6 @@ def get_uncompleted():
     data = myTasks['data']
 
     for project in data:
-        print project['project_name']
         for task in project['uncompleted']:
             if task['checked'] == 0:
                 # print " - " + task['content']

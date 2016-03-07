@@ -29,11 +29,6 @@ def get_uncompleted():
             new_task = Task(task['text'], task['dateCreated'])
             tasks_uncompleted.append(new_task)
 
-            # print task
-            # print task['text']
-            # print ''.join(('    ', task['type']))
-    # pprint.pprint( r.json() )
-    # print tasks_uncompleted
     return tasks_uncompleted
 
 if __name__ == "__main__":

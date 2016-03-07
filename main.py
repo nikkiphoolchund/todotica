@@ -5,6 +5,7 @@ import inspect
 import sys
 import os
 import logging
+import pickle
 
 # Requirements libs
 
@@ -38,7 +39,8 @@ def main():
     log = logging.getLogger()
 
     # Variables
-    store_tasks_file_name = "file_tasks.html"
+    store_tasks_dump_name = "file_tasks.p"
+    store_tasks_html_name = "file_tasks.html"
     tasks_file_template_name = "file_tasks_template.mako"
 
     # Command Line parsing init
@@ -76,10 +78,14 @@ def main():
     for t_task in todoist_tasks:
         tasks.append(t_task)
 
+    # Save sync tasks to pickle object (for reusability)
+    pickle.dump(tasks, open('file_tasks.p', 'wb'))
+
+    # Save sync tasks to HTML (for readability)
     myTemplate = Template(filename=tasks_file_template_name)
     tasks_file_template_rendered = myTemplate.render(tasks=tasks)
 
-    with open(store_tasks_file_name, "w+") as file_tasks:
+    with open(store_tasks_html_name, "w+") as file_tasks:
         file_tasks.write(tasks_file_template_rendered.encode('utf-8'))
 
 
