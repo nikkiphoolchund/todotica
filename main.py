@@ -55,7 +55,7 @@ def main():
 
     # TODO:
     # 1. If not file tasks_synchronized, then first time launch (print it) => Retrieve all tasks uncompleted from todoist
-    #   and from habitRica, and synchronize bidirecitonnaly (only add). Plus, add all tasks synchronized into the file_tasks
+    #   and from habitica, and synchronize bidirectionnaly (only add). Plus, add all tasks synchronized into the file_tasks
     # 2. If file_tasks exists, then check every task in file_tasks against habitica and todoist. Complete them on the other side, if they still exists
     #   and remove it from the file_tasks file
     # 3. If file_tasks exists, then check if a task is new in habitica or todoist. If so, add it into the file, and create it into the other todo management
