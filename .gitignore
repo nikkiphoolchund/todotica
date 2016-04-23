@@ -2,5 +2,4 @@ config.py
 *.pyc
 .idea
 venv/
-file_tasks.p
-file_tasks.html
+file_tasks.*
