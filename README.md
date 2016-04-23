@@ -4,6 +4,8 @@
 
 ### Requirements
 
+(Advised to create a virtualenv for this)
+* pip -r install requirements.txt
 * todotica-python: `$ pip install todoist-python`
 * python-dateutil
 * Mako

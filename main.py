@@ -23,7 +23,6 @@ from Task import Task
 # - TODO: Filtrer les taches et recuperer seulement le nom des taches
 # - TODO: Export file_tasks to Gist / Save into it automatically, so can be anywhere => Useless if web server :)
 # - TODO: If a task has disappeared, it could either mean it has been completed OR it has been deleted. Manage the cases.
-# - TODO: Create a class Task which have an agnostic format (not specific to todoist or habitica)
 # - TODO: Create classes to transfer a Habitica or Todoist task into a todotica task class
 # - TODO: Create an file which stores all the objects instead of a raw file => See Pickle
 
