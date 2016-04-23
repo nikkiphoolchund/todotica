@@ -78,7 +78,7 @@ def main():
         tasks.append(t_task)
 
     # Save sync tasks to pickle object (for reusability)
-    pickle.dump(tasks, open('file_tasks.p', 'wb'))
+    pickle.dump(tasks, open(store_tasks_dump_name, 'wb'))
 
     # Save sync tasks to HTML (for readability)
     myTemplate = Template(filename=tasks_file_template_name)
