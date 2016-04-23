@@ -6,9 +6,10 @@
 
 (Advised to create a virtualenv for this)
 * pip -r install requirements.txt
+OR
 * todotica-python: `$ pip install todoist-python`
 * python-dateutil
-* Mako
+* mako
 
 ### Getting the code running
 
