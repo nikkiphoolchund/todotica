@@ -10,7 +10,7 @@ class Task:
         self.name = name    # instance variable unique to each instance
         # TODO: Ask a specific format for these due_dates, which will be handled in sub-classes
         # Date has to manage UTC => See tzinfo. Use datetime.datetime
-        if due_date != None:
+        if due_date is not None:
             parsed_due_date = parser.parse(due_date)
             self.due_date = parsed_due_date
         else:
